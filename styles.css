@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box ;
-
+    font-family: 'VT323', monospace;
 }
 
 .outer{
@@ -18,7 +20,8 @@
     flex-direction: column;
     flex-basis: 1400px;
     align-items: center;
-    margin: 0 50px;
+    /*margin: 0 10px;*/
+    padding: 0 35px;
     /*border: 2px solid deepskyblue;*/
 }
 
@@ -30,24 +33,45 @@ nav{
 
 .logo-img{
     height: 80px;
+    margin: 15px 0;
 }
 
-ul{
-    list-style: none;
-}
-
-.headerbox{
+.smartphone-box{
     display: flex;
     /*border: 2px solid rosybrown;*/
+
+    flex-basis: 650px;
+    background-image: url("assets/smartphone.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.smarthphone{
-    height: 85vh;
-    margin: 25px 0;
+.injectie{
+    max-width: 500px;
+    padding: 70px 50px;
+    /*border: 2px solid yellow;*/
 }
 
 body{
     min-width: 100vh;
 }
 
+.injectie-1{
+    /*display: none;*/
+    color: green;
+}
 
+.injectie-2{
+    /*display: none;*/
+    color: blue;
+}
+
+.injectie-3{
+    /*display: none;*/
+    color: red;
+}
+
+footer{
+    margin: 15px 0;
+}

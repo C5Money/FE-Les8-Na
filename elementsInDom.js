@@ -5,13 +5,11 @@ for (let i = 0; i < inventory.length; i++){
 }
 console.log(sumSold);
 
-
-
 // Dynamisch injecteren tv's sold GROEN
-const tvsSold = document.createElement("h1");
-tvsSold.tekstContent = "Titel Boek";
-// const hallo = "";
-// hallo.appendChild(tvsSold);
+const tvsSold = document.getElementById("injectie-1");
+tvsSold.innerHTML = `
+        Hoeveel TV's zijn er verkocht?<br/>
+        Verkochte TV's: <strong>${sumSold}</strong><br/><br/>`;
 
 
 
@@ -22,11 +20,25 @@ for (let i = 0; i < inventory.length; i++){
 }
 console.log(sumBougth);
 
-
-
 // Dynamisch injecteren tv's bought BLAUW
+const tvBought = document.getElementById("injectie-2");
+tvBought.innerHTML = `
+        Hoeveel TV's zijn er ingekocht?<br/>
+        Verkochte TV's: <strong>${sumBougth}</strong><br/><br/>`;
 
 
 
+// Totall Tv's still to buy
+let stillToBuy = 0;
+for(let i = 0; i < inventory.length; i++){
+    stillToBuy += inventory[i].originalStock - inventory[i].sold;
+}
 
-//
+console.log(stillToBuy);
+
+// Dynamisch injecteren tv's bought ROOD
+const tvStillToBuy = document.getElementById("injectie-3");
+tvStillToBuy.innerHTML = `
+        Hoeveel TV's moeten er nog ingekocht worden?<br/>
+        Ingekochte TV's: <strong>${stillToBuy}</strong><br/><br/>`;
+
