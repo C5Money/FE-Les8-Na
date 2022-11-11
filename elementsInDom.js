@@ -24,7 +24,7 @@ console.log(sumBougth);
 const tvBought = document.getElementById("injectie-2");
 tvBought.innerHTML = `
         Hoeveel TV's zijn er ingekocht?<br/>
-        Verkochte TV's: <strong>${sumBougth}</strong><br/><br/>`;
+        Ingekochte TV's: <strong>${sumBougth}</strong><br/><br/>`;
 
 
 
@@ -40,5 +40,5 @@ console.log(stillToBuy);
 const tvStillToBuy = document.getElementById("injectie-3");
 tvStillToBuy.innerHTML = `
         Hoeveel TV's moeten er nog ingekocht worden?<br/>
-        Ingekochte TV's: <strong>${stillToBuy}</strong><br/><br/>`;
+        Inkoop TV's: <strong>${stillToBuy}</strong><br/><br/>`;
 
