@@ -4,14 +4,14 @@ const tvList = inventory.map((tvName) => {
 });
 console.log(tvList);
 
-
-//
 function getTvNames(array){
-    let countTvNames = 0;
-    for(let i = 0; i < inventory.length; i++){
-        countTvNames += array[i].brand;
-        return array;
-    }
+    const tv = document.getElementById("injectie-tvInfoList");
+
+    const tvList = array.map((tvName) => {
+        return `<li>${tvName.brand}</li>`;
+    });
+
+    tv.innerHTML = `${tvList.join('')}`;
 }
 
-console.log(getTvNames(tvList));
+getTvNames(inventory);
