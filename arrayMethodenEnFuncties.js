@@ -11,7 +11,7 @@ function getTvNames(array){
         return `<li>${tvName.brand}</li>`;
     });
 
-    tv.innerHTML = `${tvList.join('')}`;
+    tv.innerHTML = `${tvList.join("")}</br>`;
 }
 
 getTvNames(inventory);

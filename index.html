@@ -8,6 +8,7 @@
     <script defer src="elementsInDom.js"></script>
     <script defer src="arrayMethodenEnFuncties.js"></script>
     <script defer src="functies.js"></script>
+    <script defer src="eventShowData.js"></script>
     <title>Tech It Easy Dashboard</title>
 </head>
 <body>
@@ -20,16 +21,17 @@
 <section class="outer">
     <div class="inner">
         <div class="smartphone-box">
-            <div class="injectie">
+            <div id="injectie" class="injectie">
                 <p id="injectie-1" class="injectie-1"></p>
                 <p id="injectie-2" class="injectie-2"></p>
                 <p id="injectie-3" class="injectie-3"></p>
                 <p id="injectie-tvInfoList"> </p>
                 <p id="tvSpecs"> </p>
-
+                <p id="tvPrice"> </p>
+                <p id="ffKijken"> </p>
             </div>
-            <div class="buttons">
-                <button class="button verkocht">SOLD</button>
+            <div id="buttons" class="buttons">
+                <button type="button" id="button-sold" class="button verkocht">SOLD</button>
                 <button class="button ingekocht">STOCK</button>
                 <button class="button koop">2BUY</button>
                 <button class="button info">INFO</button>
