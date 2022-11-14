@@ -1,59 +1,49 @@
 // Weergeven TV Specs
-// function getTVName(tv){
-//     return `${tv.brand} ${tv.type} - ${tv.name}`;
-// }
-// document.getElementById("ffKijken").testje.innerHTML = getTVName(inventory[1]);
-//
-
+function getTVName(tv){
+    return `${tv.brand} ${tv.type} - ${tv.name}`;
+}
 
 
 // Weergeven TV prijzen
-// function getTvPrice(tv){
-//     return  `€${tv.price},-`;
-// }
-//
-// getTvPrice();
-//
+function getTvPrice(tv){
+    return  `€${tv.price},-`;
+}
+
 
 // Weergeven TV schermgrootte
-// function getSchermGrootte(tv){
+function getSchermGrootte(sizesArray){
+    let output = " ";
 
-// function testje(arraytje) {
-//
-//
-//     for (let i = 0; i < arraytje.length; i++) {
-//         const schermgrootteInCms = inventory[i];
-//
-//
-//         console.log(schermgrootteInCms);
-//
-//     }
-//     return ;
-// }
-//
-// testje(inventory.av)
-// }
+    for (let i = 0; i < 2; i++){
+        const inches = sizesArray[i];
+        const cm = sizesArray[i] * 2.54;
 
-// getSchermGrootte();
+        output = output + `${inches} inch (${cm} cm)`;
 
-// for(let i = 0; i < inventory.length; i++) {
-//     console.log(inventory.name);
-//
-// }
+        if(sizesArray.length -1){
+            output = `${output} | `;
+        }
+    }
+    return output;
+}
 
-// for (let i = 0; i < inventory.length; i++) {
-//     console.log(inventory[i].availableSizes);
-// }
+const specTv1 = document.getElementById("tv1");
+
+specTv1.innerHTML = `${getTVName(inventory[3])}</br>
+                     ${getTvPrice(inventory[3])}</br>
+                     ${getSchermGrootte(inventory[3].availableSizes)}</br>`;
 
 
 function getSpecs(array){
-    const sturenSpecjes = document.getElementById("ffKijken");
+    const sturenSpecjes = document.getElementById("injectie-tvInfoList");
 
     const specs = array.map((tv) => {
-       return `${tv.brand} ${tv.type} - ${tv.name} </hr> `;
+       return `${getTVName(tv)}</br>
+                     ${getTvPrice(tv.price)}</br>
+                     ${getSchermGrootte(tv.availableSizes)}`;
     });
 
-    sturenSpecjes.innerHTML = `${specs}`;
+    sturenSpecjes.innerHTML = `${specs.join("")}`;
 }
 
 getSpecs(inventory);

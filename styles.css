@@ -69,9 +69,15 @@ body{
 }
 
 #injectie-tvInfoList{
-    visibility: hidden;
+    /*display: ;*/
 }
 
+#ffKijken{
+    /*display: none;*/
+    /*border: 2px solid red;*/
+    height: 270px;
+    padding-top: 20px;
+}
 
 
 .buttons{

@@ -12,8 +12,8 @@ function handleShowAllData(e){
         const dataSold = document.getElementById("injectie-3");
         dataSold.style.visibility = "visible";
     } else if (e.target.textContent === "INFO") {
-        const dataSold = document.getElementById("injectie-tvInfoList");
-        dataSold.style.visibility = "visible";
+        const dataSold = document.getElementById("ffKijken");
+        dataSold.style.display = "inline-block";
     }
 }
 
